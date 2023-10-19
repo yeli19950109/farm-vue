@@ -1,0 +1,27 @@
+{
+  "name": "@farmfe-examples/vue",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "core-js": "^3.33.0",
+    "vue": "^3.3.4"
+  },
+  "devDependencies": {
+    "@farmfe/cli": "^0.5.8",
+    "@farmfe/core": "^0.13.8",
+    "@farmfe/js-plugin-vue": "^3.0.0",
+    "@vitejs/plugin-legacy": "^4.1.1",
+    "@vitejs/plugin-vue": "^4.4.0",
+    "@vue/language-server": "^1.8.19",
+    "vite": "^4.5.0"
+  },
+  "scripts": {
+    "start": "farm start",
+    "farm-build": "farm build",
+    "preview": "farm preview",
+    "vite-build": "vite build",
+    "vite-legacy-build": "vite build -c vite-legacy.config.ts",
+    "farm-vite": "farm build -c farm-vite.config.ts",
+    "build": "npm run farm-build && npm run vite-build && npm run farm-vite && npm run vite-legacy-build"
+  }
+}
